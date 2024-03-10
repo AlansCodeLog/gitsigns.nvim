@@ -624,7 +624,7 @@ function Obj:run_blame(lines, lnum, ignore_whitespace)
     return ret
   end
 
-  local args = { 'blame', '--contents', '-', '--incremental' }
+  local args = { 'blame', 'HEAD', '--contents', '-', '--incremental' }
 
   if lnum then
     vim.list_extend(args, { '-L', lnum .. ',+1' })
